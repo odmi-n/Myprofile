@@ -1,0 +1,96 @@
+:root {
+  --color-bg: #ffffff;
+  --color-text: #000000;
+  --color-highlight-bg: #000000;
+  --color-highlight-text: #ffffff;
+  --font-main: Arial, Helvetica, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.page {
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* ===== Header ===== */
+.header {
+  margin-bottom: 2rem;
+}
+.header__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* ===== Profile Section ===== */
+.profile__section {
+  margin-bottom: 2rem;
+}
+.profile__name {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+.profile__photo {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 1rem;
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: #555;
+  border-radius: 8px;
+}
+.profile__age,
+.profile__gender {
+  margin: 0.25rem 0;
+}
+
+/* ===== Hobby Section (Highlight) ===== */
+.profile__hobby {
+  background-color: var(--color-highlight-bg);
+  color: var(--color-highlight-text);
+  padding: 1rem;
+  border-radius: 8px;
+}
+.profile__hobby-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.profile__hobby-text {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* ===== Footer ===== */
+.footer {
+  margin-top: 2rem;
+}
+.footer__text {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+/* ===== Responsive ===== */
+@media (min-width: 768px) {
+  .header__title {
+    font-size: 2rem;
+  }
+  .profile__name {
+    font-size: 1.5rem;
+  }
+  .profile__photo {
+    width: 200px;
+    height: 200px;
+    font-size: 1rem;
+  }
+}

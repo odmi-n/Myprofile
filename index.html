@@ -1,48 +1,34 @@
-<!doctype html>
-<html lang="ja" dir="ltr">
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <!-- iOS/AndroidのUI色（ライト/ダーク自動） -->
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F5F5F7">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0B0B0C">
-
-  <title>自己紹介</title>
-  <meta name="description" content="職業・名前・年齢をシンプルに表示する自己紹介ページ" />
-
-  <link rel="preload" href="styles/style.css" as="style">
-  <link rel="stylesheet" href="styles/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>しょう とうえんの紹介ページ</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <main class="page" role="main">
-    <section class="hero card" aria-live="polite" aria-busy="true">
-      <div class="role-row">
-        <span class="dot" aria-hidden="true"></span>
-        <h1 id="role" class="role skeleton">職業</h1>
-      </div>
-      <h2 id="name" class="name skeleton">名前</h2>
-      <p id="age" class="meta skeleton">年齢</p>
-      <p id="updated" class="updated meta skeleton">最終更新日</p>
+<body class="page">
+
+  <header class="header">
+    <h1 class="header__title">しょう とうえんの紹介ページ</h1>
+  </header>
+
+  <main class="profile">
+    <section class="profile__section">
+      <h2 class="profile__name">しょう とうえん</h2>
+      <div class="profile__photo"><img src=""></div>
+      <p class="profile__age">年齢：21歳</p>
+      <p class="profile__gender">性別：男性</p>
     </section>
-    <footer class="footer">
-      <small>© <span id="year"></span></small>
-    </footer>
+
+    <section class="profile__section profile__hobby">
+      <h3 class="profile__hobby-title">趣味</h3>
+      <p class="profile__hobby-text">プログラミング・ランニング・読書</p>
+    </section>
   </main>
 
-  <!-- JSON-LD（JSで上書き） -->
-  <script id="ld-json" type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "",
-    "jobTitle": "",
-    "birthDate": null
-  }
-  </script>
+  <footer class="footer">
+    <p class="footer__text">© 2025 Shou Touen</p>
+  </footer>
 
-  <script defer src="scripts/main.js"></script>
-  <noscript>
-    <p class="noscript">JavaScriptを有効にしてください。プロフィール情報の描画に使用します。</p>
-  </noscript>
 </body>
 </html>
